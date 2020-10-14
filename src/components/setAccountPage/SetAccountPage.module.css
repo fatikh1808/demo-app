@@ -1,0 +1,107 @@
+.setAccountPage {
+    grid-area: page;
+    display: grid;
+    grid-template-rows: 300px 60px 120px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+            "input text"
+            "gender genderText"
+            "button button";
+}
+
+
+.input {
+    grid-area: input;
+    display: grid;
+    margin-top: 30px;
+    grid-template-rows: 60px 60px 60px;
+    grid-template-areas: "inputN" "inputL" "inputD";
+
+}
+
+.text {
+    grid-area: text;
+    display: grid;
+    grid-template-rows: 60px 60px 60px;
+    grid-template-areas: "textN" "textL" "textD";
+    margin-top: 30px;
+}
+
+.text h4 {
+    display: block;
+    align-self: center;
+    float: left;
+    width: 250px;
+    margin: 0;
+    letter-spacing: -0.2px;
+    word-spacing: 2.4px;
+    font-weight: 400;
+    text-decoration: none;
+    font-variant: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(42, 133, 0);
+    background-color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.3) 4px 2px 8px;
+}
+
+.textN {
+    grid-area: textN;
+}
+
+.textL {
+    grid-area: textL;
+}
+
+.textD {
+    grid-area: textD;
+}
+
+.gender {
+    grid-area: gender;
+    float: right;
+    height: 60px;
+    display: grid;
+}
+
+.gender div {
+    align-self: center;
+    height: 20px;
+    margin-right: 25px;
+}
+
+.gender div input {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.genderText {
+    display: grid;
+    height: 60px;
+    align-self: center;
+    grid-area: genderText;
+    margin: 2px;
+    letter-spacing: -0.2px;
+    word-spacing: 2.4px;
+    font-weight: 400;
+    text-decoration: none;
+    font-variant: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(42, 133, 0);
+    background-color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.3) 4px 2px 8px;
+}
+
+.genderText span {
+    display: block;
+    height: 50%;
+    align-self: center;
+    text-align: left;
+    font-size: 18px;
+}

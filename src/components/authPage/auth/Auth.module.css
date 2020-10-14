@@ -1,0 +1,23 @@
+.authPage {
+    grid-area: page;
+    text-align: center;
+    height: 500px;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 40px 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                  "login"
+                "buttonFunc"
+               "buttonChange";
+}
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+                   "login"
+                "buttonChange"
+                "buttonFunc";
+        grid-template-rows: 1fr 20px 20px;
+        grid-template-columns: 1fr;
+    }
+}

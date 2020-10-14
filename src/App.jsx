@@ -1,59 +1,40 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect
+    Switch
 } from "react-router-dom";
-import {Provider} from 'react-redux';
 import './App.css';
-import configureStore from '../src/store';
-import AccountPage from "./components/accountPage/AccountPage";
-import SetAccountPage from "./components/setAccountPage/SetAccountPage";
-import Auth from "./components/authPage/auth/Auth";
+import AppBar from "./components/appBar/AppBar";
+import Footer from "./components/footer/Footer";
+import Router from "./components/Router";
 
-const store = configureStore();
+const App = (props) => {
 
-const App = () => {
+    const {
+        logout,
+        info,
+        getAccountInfo,
+        userId,
+        isAuthenticated
+    } = props;
 
-    const [name, setName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [dateOfBirth, setDateOfBirth] = useState('')
-    const [gender, setGender] = useState('')
+    useEffect(() => {
+        getAccountInfo()
+    }, []);
 
     return (
-        <div className="App">
-            <Provider store={store}>
-                <Router>
-                    <Switch>
-                        <Route path={'/auth'}>
-                            <Auth/>
-                        </Route>
-                        <Route path={'/settings'}>
-                            <SetAccountPage
-                                name={name}
-                                setName={setName}
-                                lastName={lastName}
-                                setLastName={setLastName}
-                                dateOfBirth={dateOfBirth}
-                                setDateOfBirth={setDateOfBirth}
-                                setGender={setGender}
-                            />
-                        </Route>
-                        <Route path={'/account'}>
-                            <AccountPage
-                                gender={gender}
-                                name={name}
-                                lastName={lastName}
-                                dateOfBirth={dateOfBirth}
-                            />
-                        </Route>
-                        <Redirect to={'/auth'}/>
-                    </Switch>
-                </Router>
-            </Provider>
+        <div>
+            <AppBar
+                isAuthenticated={isAuthenticated}
+                logout={logout}/>
+            <Switch>
+                <Router
+                    info={info}
+                    userId={userId}
+                />
+            </Switch>
+            <Footer/>
         </div>
-    );
+    )
 }
 
 export default App;

@@ -1,0 +1,92 @@
+.footer {
+    grid-area: footer;
+    text-align: center;
+    /*background-color: black;*/
+    height: 100%;
+    color: gray;
+    display: grid;
+    grid-template-rows: 45% 35% 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
+    grid-template-areas:
+            "phone phone instLogo instLogo"
+            "footerInfo footerFeedBack footerBuss footerFAQ"
+            "footerName footerName footerName footerName";
+}
+
+.footer .divA {
+    align-self: center;
+}
+
+.footer .divA h6 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3e3e3d;
+}
+
+.footer .divA :hover {
+    color: rgb(61, 117, 0);
+    text-shadow: rgb(27 25 25 / 40%) 3px 3px 5px;
+}
+
+.phone {
+    grid-area: phone;
+    padding-left: 15px;
+}
+
+.phone h2 {
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(61, 117, 0);
+    font-weight: 500;
+}
+
+.phone :hover {
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(27 25 25 / 40%) 3px 3px 5px;
+}
+
+.instLogo {
+    grid-area: instLogo;
+    align-self: center;
+}
+
+.instLogo div {
+    display: inline-block;
+    height: 55px;
+    -webkit-writing-mode: vertical-lr;
+    margin: auto 10px;
+}
+
+.instLogo div img {
+    width: 45px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(3px 3px 3px #444);
+}
+
+.footerInfo {
+    grid-area: footerInfo;
+}
+
+.footerFeedBack {
+    grid-area: footerFeedBack;
+}
+
+.footerBuss {
+    grid-area: footerBuss;
+}
+
+.footerFAQ {
+    grid-area: footerFAQ;
+}
+
+.footerName {
+    grid-area: footerName;
+    font-size: 10px;
+    margin: 0;
+}

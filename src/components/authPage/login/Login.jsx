@@ -1,9 +1,11 @@
 import React from "react";
+import s from './Login.module.css';
+import Input from "../../ui/input/Input";
 
 const Login = (props) => {
 
     const {
-        name,
+        login,
         password,
         setPassword,
         phoneNumber,
@@ -11,18 +13,24 @@ const Login = (props) => {
     } = props;
 
     return (
-        <div>
-            <h1>{name}</h1>
-            <input value={phoneNumber}
-                   type={'text'}
-                   name={'setPhoneNumber'}
-                   onChange={event => setPhoneNumber(event.target.value)}
-                   placeholder={'Phone Number'}/>
-            <input value={password}
-                   type={'text'}
-                   name={'setPassword'}
-                   onChange={event => setPassword(event.target.value)}
-                   placeholder={'Password'}/>
+        <div className={s.login}>
+            <div className={s.componentText}>
+                <h1>{login ? 'Login' : 'Register'}</h1>
+            </div>
+            <Input primary
+                value={phoneNumber}
+                type={'text'}
+                name={'setPhoneNumber'}
+                onChange={event => setPhoneNumber(event.target.value)}
+                placeholder={'Phone Number'}
+            />
+            <Input
+                value={password}
+                type={'text'}
+                name={'setPassword'}
+                onChange={event => setPassword(event.target.value)}
+                placeholder={'Password'}
+            />
         </div>
     )
 }

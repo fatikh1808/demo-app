@@ -1,0 +1,165 @@
+.accountPage {
+    grid-area: page;
+    text-align: center;
+    display: grid;
+    margin-top: 40px;
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 1fr 220px;
+    grid-gap: 2vw;
+    grid-template-areas: "cash info" "companies companies";
+}
+
+.cash {
+    height: 100%;
+    grid-area: cash;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cash h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 500;
+    color: rgb(42, 133, 0);
+    background-color: rgb(255, 255, 255);
+    text-shadow: rgb(0 0 0 / 39%) 6px 4px 20px;
+}
+
+.info {
+    padding-top: 20px;
+    grid-area: info;
+    height: available;
+    display: grid;
+    grid-template-rows: 60px 60px 60px 150px;
+    grid-template-columns: 1fr;
+    grid-gap: 1vw;
+    grid-template-areas: "name" "lastName" "date" "buttSett";
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(53, 59, 5, 0.4);
+}
+
+.name {
+    grid-area: name;
+}
+
+.lastName {
+    grid-area: lastName;
+}
+
+.date {
+    grid-area: date;
+}
+
+.icon {
+    grid-area: buttSett;
+    align-self: center;
+}
+
+.info h2 {
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    word-spacing: 2.4px;
+    text-decoration: none;
+    font-variant: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(42, 133, 0);
+    background-color: rgb(255, 255, 255);
+    text-shadow: rgb(0 0 0 / 39%) 6px 4px 20px;
+}
+
+.info .icon :hover {
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 0 5px 0 #064626;
+    border-radius: 50px;
+}
+
+.companies {
+    grid-area: companies;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-areas: "text" "items";
+}
+
+.companies .text {
+    justify-self: center;
+    border-bottom: 1px solid rgba(53, 59, 5, 0.4);
+    width: -webkit-fill-available;
+    padding: 10px;
+    text-align-last: center;
+    border-bottom: 1px solid rgba(53, 59, 5, 0.4);
+    border-top: 1px solid rgba(53, 59, 5, 0.4);
+    box-shadow: 0px 0px 20px 0px rgb(53 59 5 / 8%);
+}
+
+.companies .text h2{
+    grid-area: text;
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+    letter-spacing: -0.2px;
+    word-spacing: 2.4px;
+    font-weight: 500;
+    text-decoration: none;
+    font-variant: normal;
+    text-transform: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(42, 133, 0);
+    background-color: rgb(255, 255, 255);
+    text-shadow: rgb(0 0 0 / 9%) 0px 0px 5px;
+    background-color: rgba(204, 0, 0, 0);
+}
+
+.companies .items {
+    grid-area: items;
+    align-self: center;
+}
+
+.companies div img {
+    margin: 5px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 39%));
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 39%));
+}
+
+.buttSett {
+    grid-area: buttSett;
+}
+
+.buttSett button {
+    box-shadow: 1px 1px 6px 1px black;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #2b5205;
+    display: inline-block;
+    cursor: pointer;
+    color: #3f5c12;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #325214;
+}
+
+.buttSett button :hover {
+    background-color: transparent;
+}
+
+.buttSett button :active {
+    position: relative;
+    top: 1px;
+}

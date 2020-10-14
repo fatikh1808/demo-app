@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import Auth from "./Auth";
+import AccountPageReducer from "./AccountPage";
+import AuthPage from "./AuthPage";
 
 export default combineReducers({
-    Auth
+    AccountPageReducer,
+    AuthPage
 })
